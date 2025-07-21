@@ -2,6 +2,8 @@
 
 ![screenshot](/screenshot.png)
 
+This is a ~blatant ripoff~ fork of [gemakfy/MilkGrub](https://github.com/gemakfy/MilkGrub) which moves the menu text over a smidge and widens it so I can see my whole kernel name.
+
 ### 🛠️ Installation
 
 ```bash
