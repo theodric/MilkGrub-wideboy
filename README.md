@@ -1,4 +1,4 @@
-# 🥛 Milk Outside A Bag Of Milk Grub Theme
+# 🥛 Milk Outside A Bag Of Milk Grub **WIDEBOY** Theme
 
 ![screenshot](/screenshot.png)
 
