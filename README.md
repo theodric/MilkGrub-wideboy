@@ -1,6 +1,6 @@
 # 🥛 Milk Outside A Bag Of Milk Grub Theme
 
-![peepee poopoo](screenshot.png)
+![peepee poopoo](./screenshot.png)
 
 ### 🛠️ Installation
 
