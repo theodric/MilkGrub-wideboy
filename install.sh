@@ -27,7 +27,7 @@ echo "1) Potato (1024x768)"
 echo "2) Full HD (1920x1080)"
 echo "3) 2K (2560x1440)"
 echo "4) 4K (3840x2160)"
-read -p "Enter choice [1-3]: " res_choice
+read -p "Enter choice [1-4]: " res_choice
 
 case $res_choice in
     1) GFXMODE="1024x768x32" ;;
