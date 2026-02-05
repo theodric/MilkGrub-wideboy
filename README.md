@@ -12,7 +12,7 @@ sudo ./MilkGrub-wideboy/install.sh
 ```
 
 ### ❄ NixOS
-Do not use NixOS. It is bad. You don't need it.
+Do not use NixOS. It is bad. You don't need it. 
 
-## O!
+## Hellogoodbye
 Code reference: https://github.com/uiriansan/LainGrubTheme
