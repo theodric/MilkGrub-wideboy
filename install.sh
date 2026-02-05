@@ -1,16 +1,16 @@
 #!/bin/bash
 
-THEME_NAME="MilkGrub"
+THEME_NAME="MilkGrub-wideboy"
 THEME_DIR="/boot/grub/themes/$THEME_NAME"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Check if we're in the right directory
 if [ ! -f "$SCRIPT_DIR/theme.txt" ] || [ ! -d "$SCRIPT_DIR/icons" ]; then
-    if [ -d "$SCRIPT_DIR/MilkGrub" ] && [ -f "$SCRIPT_DIR/MilkGrub-wideboy/theme.txt" ]; then
-        SCRIPT_DIR="$SCRIPT_DIR/MilkGrub"
+    if [ -d "$SCRIPT_DIR/MilkGrub-wideboy" ] && [ -f "$SCRIPT_DIR/MilkGrub-wideboy/theme.txt" ]; then
+        SCRIPT_DIR="$SCRIPT_DIR/MilkGrub-wideboy"
     else
-        echo "Error: Please run this script from inside the MilkGrub theme directory" >&2
-        echo "or place the script in the parent folder of MilkGrub directory" >&2
+        echo "Error: Please run this script from inside the MilkGrub-wideboy theme directory" >&2
+        echo "or place the script in the parent folder of MilkGrub-wideboy directory" >&2
         exit 1
     fi
 fi
@@ -23,15 +23,17 @@ fi
 
 # Resolution selection
 echo "Select display resolution:"
-echo "1) Full HD (1920x1080)"
-echo "2) 2K (2560x1440)"
-echo "3) 4K (3840x2160)"
+echo "1) Potato (1024x768)"
+echo "2) Full HD (1920x1080)"
+echo "3) 2K (2560x1440)"
+echo "4) 4K (3840x2160)"
 read -p "Enter choice [1-3]: " res_choice
 
 case $res_choice in
-    1) GFXMODE="1920x1080x32" ;;
-    2) GFXMODE="2560x1440x32" ;;
-    3) GFXMODE="3840x2160x32" ;;
+    1) GFXMODE="1024x768x32" ;;
+    2) GFXMODE="1920x1080x32" ;;
+    3) GFXMODE="2560x1440x32" ;;
+    4) GFXMODE="3840x2160x32" ;;
 esac
 
 # Install theme
