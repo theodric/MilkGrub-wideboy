@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Check if we're in the right directory
 if [ ! -f "$SCRIPT_DIR/theme.txt" ] || [ ! -d "$SCRIPT_DIR/icons" ]; then
-    if [ -d "$SCRIPT_DIR/MilkGrub" ] && [ -f "$SCRIPT_DIR/MilkGrub/theme.txt" ]; then
+    if [ -d "$SCRIPT_DIR/MilkGrub" ] && [ -f "$SCRIPT_DIR/MilkGrub-wideboy/theme.txt" ]; then
         SCRIPT_DIR="$SCRIPT_DIR/MilkGrub"
     else
         echo "Error: Please run this script from inside the MilkGrub theme directory" >&2
@@ -43,7 +43,7 @@ cp -r "$SCRIPT_DIR"/* "$THEME_DIR/"
 sed -i '/GRUB_THEME=/d' /etc/default/grub
 sed -i '/GRUB_GFXMODE=/d' /etc/default/grub
 
-echo 'GRUB_THEME="/boot/grub/themes/MilkGrub/theme.txt"' >> /etc/default/grub
+echo 'GRUB_THEME="/boot/grub/themes/MilkGrub-wideboy/theme.txt"' >> /etc/default/grub
 echo "GRUB_GFXMODE=\"$GFXMODE\"" >> /etc/default/grub
 
 # Update GRUB
@@ -51,6 +51,8 @@ if command -v update-grub &> /dev/null; then
     update-grub
 elif command -v grub-mkconfig &> /dev/null; then
     grub-mkconfig -o /boot/grub/grub.cfg
+elif command -v grub2-mkconfig &> /dev/null; then
+    grub2-mkconfig -o /boot/grub2/grub.cfg
 else
     echo "Error: Could not find update-grub or grub-mkconfig" >&2
     exit 1

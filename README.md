@@ -1,4 +1,4 @@
-# 🥛 Milk Outside A Bag Of Milk Grub **WIDEBOY** Theme
+# 🥛 Milk Outside A Bag Of Milk Grub - **WIDEBOY** Edition
 
 ![screenshot](/screenshot.png)
 
@@ -7,36 +7,12 @@ This is a ~blatant ripoff~ fork of [gemakfy/MilkGrub](https://github.com/gemakfy
 ### 🛠️ Installation
 
 ```bash
-git clone https://github.com/gemakfy/MilkGrub
-sudo ./MilkGrub/install.sh
+git clone https://github.com/theodric/MilkGrub-wideboy.git
+sudo ./MilkGrub-wideboy/install.sh
 ```
 
 ### ❄ NixOS
-```nix
-# flake.nix
-{
-  inputs.milk-grub-theme.url = "github:gemakfy/MilkGrub";
-
-  outputs = { nixpkgs, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      modules = [
-        # ...
-        inputs.milk-grub-theme.nixosModule
-      ];
-    };
-  };
-}
-
-# configuration.nix
-{
-  boot.loader.grub = {
-    enable = true;
-    gfxmodeEfi = "1920x1080"; # set your resolution
-    gfxpayloadEfi = "keep";
-    milk-theme.enable = true;
-  };
-}
-```
+Do not use NixOS. It is bad. You don't need it.
 
 ## O!
 Code reference: https://github.com/uiriansan/LainGrubTheme
